@@ -66,7 +66,7 @@ const navigation = [
   { name: "Home", href: "#home" },
   { name: "About Me", href: "#aboutMe" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "Articles", href: "#articles" },
   { name: "Blogs", href: "#blogs" },
   { name: "Contact", href: "#contact" },
 ];
@@ -287,7 +287,7 @@ export default function Home() {
         </div>
         <div
           id="skills"
-          className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-40 mt-40"
+          className="flex flex-col justify-center items-center gap-40 mt-40"
         >
           <div className="flex flex-col justify-center items-center gap-2">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -298,13 +298,13 @@ export default function Home() {
               latest web development technologies that are used in the market
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-20 ml-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-20 ml-28 items-start">
             <div className="flex flex-col justify-center items-start gap-5">
               <div className="flex justify-start items-center gap-5">
                 <img src={frontendLogo} alt="frontendLogo" />
                 <p className="font-semibold text-lg">Frontend</p>
               </div>
-              <p className="text-md leading-8 text-gray-600">
+              <p className="text-sm font-semibold leading-8 text-gray-600">
                 HTML, CSS, React JS, React Native, Tailwind CSS
               </p>
             </div>
@@ -313,7 +313,7 @@ export default function Home() {
                 <img src={backendLogo} alt="frontendLogo" />
                 <p className="font-semibold text-lg">Backend</p>
               </div>
-              <p className="text-md leading-8 text-gray-600">
+              <p className="text-sm font-semibold leading-8 text-gray-600">
                 Node JS, Express JS
               </p>
             </div>
@@ -322,7 +322,7 @@ export default function Home() {
                 <img src={databaseLogo} alt="frontendLogo" />
                 <p className="font-semibold text-lg">Databases</p>
               </div>
-              <p className="text-md leading-8 text-gray-600">
+              <p className="text-sm font-semibold leading-8 text-gray-600">
                 MongoDB, Sanity.io
               </p>
             </div>
@@ -331,7 +331,7 @@ export default function Home() {
                 <img src={githubLogo} alt="frontendLogo" />
                 <p className="font-semibold text-lg">DevOps</p>
               </div>
-              <p className="text-md leading-8 text-gray-600">GitHub</p>
+              <p className="text-sm font-semibold leading-8 text-gray-600">GitHub</p>
             </div>
           </div>
           <div
@@ -361,7 +361,7 @@ export default function Home() {
         </div>
         <div
           id="projects"
-          className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-40 mt-40"
+          className="flex flex-col justify-center items-center gap-40 mt-40"
         >
           <div className="flex flex-col justify-center items-center gap-2">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -372,7 +372,7 @@ export default function Home() {
               latest web development technologies that are used in the market
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-20 mr-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-20 gap-y-20 mx-10">
             <Card maxW="sm">
               <CardBody>
                 <Image
@@ -385,10 +385,7 @@ export default function Home() {
                   <Text>
                     You can write simple blogs using this website that supports
                     basic features of a text editor such as bold, italic, bullet
-                    points. etc This can be your personal blog space where you
-                    can write and store them You can also share the blogs on
-                    whatsapp, mail or simply copy the link to your clipboard and
-                    share it on social media
+                    points. etc
                   </Text>
                 </Stack>
               </CardBody>
@@ -417,11 +414,7 @@ export default function Home() {
                   <Heading size="md">Task Assigner</Heading>
                   <Text>
                     Create and manage tasks across your team using this web
-                    application. You can add and delete members, assign them
-                    specific tasks and update the status of your task. This way
-                    you can keep track of what tasks are complete and pending
-                    and plan the next actions accordingly for your project
-                    completion.
+                    application.
                   </Text>
                 </Stack>
               </CardBody>
@@ -452,9 +445,7 @@ export default function Home() {
                   <Heading size="md">CMEP Pune</Heading>
                   <Text>
                     This is a website that I built for a construction company
-                    that highlights their work, clients and services. It
-                    broadcasts what they do, the team that does it and displays
-                    various projects that have been constructed by them.
+                    that highlights their work, clients and services.
                   </Text>
                 </Stack>
               </CardBody>
@@ -481,9 +472,6 @@ export default function Home() {
                   <Heading size="md">Matchpointandgames</Heading>
                   <Text>
                     This app shows you the latest updates of local tournaments.
-                    You can view what teams and players are playing, the matches
-                    held between them in an organized manner. You can also view
-                    team and player statistics.
                   </Text>
                 </Stack>
               </CardBody>
@@ -514,7 +502,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          id="blogs"
+          id="articles"
           className="flex flex-col justify-center items-center mt-40"
         >
           <div className="flex justify-center items-center gap-10">
