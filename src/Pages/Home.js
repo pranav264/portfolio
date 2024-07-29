@@ -67,7 +67,6 @@ const navigation = [
   { name: "About Me", href: "#aboutMe" },
   { name: "Skills", href: "#skills" },
   { name: "Articles", href: "#articles" },
-  { name: "Blogs", href: "#blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
