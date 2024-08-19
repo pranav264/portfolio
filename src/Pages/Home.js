@@ -28,15 +28,13 @@ import {
   Button,
   Modal,
   SimpleGrid,
+  Avatar,
+  AvatarBadge,
 } from "@chakra-ui/react";
-import frontendLogo from "../assets/icons8-frontend-48.png";
-import backendLogo from "../assets/icons8-backend-development-48.png";
-import databaseLogo from "../assets/icons8-database-48.png";
-import githubLogo from "../assets/icons8-github-48.png";
-import blogItScreenShot from "../assets/Screenshot_24-6-2024_114048_blogit-frontend.vercel.app.jpeg";
-import taskAssignerScreenShot from "../assets/Screenshot_24-6-2024_114342_task-manager-frontend-tawny.vercel.app.jpeg";
 import cmeppuneScreeShot from "../assets/Screenshot_25-6-2024_12134_cmeppune.com.jpeg";
-import appScreenShot from "../assets/appHomeScreenShot.jpeg";
+import durgaCafeScreenShot from "../assets/durga_cafe.png";
+import eCommerceScreenShot from "../assets/e_commerce.png";
+import salesDashboardScreenShot from "../assets/sales_dashboard.png";
 import { useNavigate } from "react-router-dom";
 import AppScreens from "../Components/AppScreens";
 import instagramLogo from "../assets/icons8-instagram-25.png";
@@ -64,9 +62,8 @@ const steps = [
 
 const navigation = [
   { name: "Home", href: "#home" },
-  { name: "About Me", href: "#aboutMe" },
-  { name: "Skills", href: "#skills" },
-  { name: "Articles", href: "#articles" },
+  { name: "Projects", href: "#projects" },
+  { name: "Articles", href: "https://www.geeksforgeeks.org/user/pranavbapat2002/contributions/" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -85,17 +82,13 @@ export default function Home() {
       <div className=".container roboto-regular">
         <header className="fixed inset-x-0 top-0 z-50">
           <nav
-            className="flex items-center justify-between p-4 lg:px-8 backdrop-blur-md"
+            className="flex items-center justify-between p-7 lg:px-8 backdrop-blur-md"
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-12 w-auto rounded-3xl"
-                  src={profilePic}
-                  alt=""
-                />
+                <h2 className="font-semibold text-2xl">Pranav</h2>
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -113,7 +106,7 @@ export default function Home() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-semibold leading-6 text-gray-900"
+                  className="text-sm font-medium leading-6 text-gray-900"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -170,74 +163,30 @@ export default function Home() {
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
           >
-            <div
-              className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            />
           </div>
-          <div id="home" className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Hi, I'm Pranav,
+          <div id="home" className="max-w-2xl mx-32 pt-28 pb-24">
+          <Avatar src={profilePic} className="mb-5">
+            <AvatarBadge boxSize='1em' bg='blue.500' />
+          </Avatar>
+            <div className="text-left">
+              <h1 className="text-lg font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                Full Stack Web Developer
               </h1>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                a Full Stack Web Developer
+              <h1 className="text-lg font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                Helping Businesses grow online
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Building responsive and user-friendly web applications
+              <p className="mt-6 text-md text-gray-800 font-thin">
+                I'm Pranav, a Web Developer with expertise in the MERN stack (MongoDB, Express.js, React, and Node.js), I specialize in delivering innovative solutions that meet real-world needs.
               </p>
             </div>
           </div>
-          <div
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            />
-          </div>
         </div>
         <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
+          className="flex justify-center items-center mb-48"
         >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
-        <div
-          id="aboutMe"
-          className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-40"
-        >
-          <div className="flex flex-col gap-10 mt-20">
-            <h1 className="text-4xl text-center font-bold tracking-tight text-gray-900 sm:text-6xl">
-              About Me
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-sm mx-6">
-              I'm a passionate and dedicated Full Stack Web Developer with a
-              strong background in building dynamic, high-performance web
-              applications. I thrive in environments where I can continuously
-              learn, grow, and apply my skills to solve complex problems. When I
-              am not coding, I spend my time making some music.
-            </p>
-          </div>
-          <div className="mr-10">
             <Stepper
-              orientation="vertical"
-              height="800px"
-              gap="0"
-              colorScheme="purple"
+              colorScheme="blue"
+              index={3}
             >
               {steps.map((step, index) => (
                 <Step key={index}>
@@ -250,394 +199,54 @@ export default function Home() {
                   </StepIndicator>
                   <Box flexShrink="0">
                     <StepTitle className="max-w-xs">{step.title}</StepTitle>
-                    <StepDescription className="max-w-xs">
-                      {step.description}
-                    </StepDescription>
                   </Box>
                   <StepSeparator />
                 </Step>
               ))}
             </Stepper>
-          </div>
-          <div
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            />
-          </div>
         </div>
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
-        <div
-          id="skills"
-          className="flex flex-col justify-center items-center gap-40 mt-40"
-        >
-          <div className="flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Skills
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xl mx-6">
-              I have worked as a Full Stack Developer and I am proficient in the
-              latest web development technologies that are used in the market
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-20 ml-28 items-start">
-            <div className="flex flex-col justify-center items-start gap-5">
-              <div className="flex justify-start items-center gap-5">
-                <img src={frontendLogo} alt="frontendLogo" />
-                <p className="font-semibold text-lg">Frontend</p>
-              </div>
-              <p className="text-sm font-semibold leading-8 text-gray-600">
-                HTML, CSS, React JS, React Native, Tailwind CSS
-              </p>
+            <div id="projects" className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-7xl mx-auto mt-36">
+              <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://cmeppune.com/">
+                <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300" src={cmeppuneScreeShot} alt="cmeppuneScreeShot" />
+                <div>
+                  <p className="text-lg font-semibold">CMEP PUNE</p>
+                  <p className="font-light text-gray-600">Website | Construction</p>
+                </div>
+              </a>
+              <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://durga-cafe-menu-one.vercel.app/">
+                <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300" src={durgaCafeScreenShot} alt="durgaCafeScreenShot" />
+                <div>
+                  <p className="text-lg font-semibold">Durga Cafe</p>
+                  <p className="font-light text-gray-600">Website | Cafe</p>
+                </div>
+              </a>
+              <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://pranav-sales-dashboard.netlify.app/">
+                <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300" src={salesDashboardScreenShot} alt="salesDashboardScreenShot" />
+                <div>
+                  <p className="text-lg font-semibold">Sales Dashboard</p>
+                  <p className="font-light text-gray-600">Website | Analytics</p>
+                </div>
+              </a>
+              <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://e-commerce-frontend-mu-eight.vercel.app/">
+                <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 border-2 border-gray-500" src={eCommerceScreenShot} alt="eCommerceScreenShot" />
+                <div>
+                  <p className="text-lg font-semibold">E Commerce</p>
+                  <p className="font-light text-gray-600">Website | E Commerce</p>
+                </div>
+              </a>
             </div>
-            <div className="flex flex-col justify-center items-start gap-5">
-              <div className="flex justify-start items-center gap-5">
-                <img src={backendLogo} alt="frontendLogo" />
-                <p className="font-semibold text-lg">Backend</p>
-              </div>
-              <p className="text-sm font-semibold leading-8 text-gray-600">
-                Node JS, Express JS
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-start gap-5">
-              <div className="flex justify-start items-center gap-5">
-                <img src={databaseLogo} alt="frontendLogo" />
-                <p className="font-semibold text-lg">Databases</p>
-              </div>
-              <p className="text-sm font-semibold leading-8 text-gray-600">
-                MongoDB, Sanity.io
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-start gap-5">
-              <div className="flex justify-start items-center gap-5">
-                <img src={githubLogo} alt="frontendLogo" />
-                <p className="font-semibold text-lg">DevOps</p>
-              </div>
-              <p className="text-sm font-semibold leading-8 text-gray-600">GitHub</p>
-            </div>
+          <div id="contact" className="flex flex-col justify-center items-center gap-2 mt-36">
+              <p className="font-light text-gray-600">Got a project?</p>
+              <a href="https://forms.gle/nGurmbZhKx32svTp9">
+                <button className="bg-blue-500 text-white text-lg px-20 py-8 rounded-lg hover:bg-blue-700">Let's work together</button>
+              </a>
           </div>
-          <div
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-            />
-          </div>
-        </div>
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
-        <div
-          id="projects"
-          className="flex flex-col justify-center items-center gap-40 mt-40"
-        >
-          <div className="flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Projects
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xl hidden lg:invisible">
-              I have worked as a Full Stack Developer and I am proficient in the
-              latest web development technologies that are used in the market
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-20 gap-y-20 mx-10">
-            <Card maxW="sm">
-              <CardBody>
-                <Image
-                  src={blogItScreenShot}
-                  alt="blogItScreenShot"
-                  borderRadius="lg"
-                />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">Blog It</Heading>
-                  <Text>
-                    You can write simple blogs using this website that supports
-                    basic features of a text editor such as bold, italic, bullet
-                    points. etc
-                  </Text>
-                </Stack>
-              </CardBody>
-              <CardFooter>
-                <ButtonGroup spacing="2">
-                  <Button
-                    variant="solid"
-                    colorScheme="purple"
-                    onClick={() =>
-                      navigateToAProject("https://blogit-frontend.vercel.app/")
-                    }
-                  >
-                    View
-                  </Button>
-                </ButtonGroup>
-              </CardFooter>
-            </Card>
-            <Card maxW="sm">
-              <CardBody>
-                <Image
-                  src={taskAssignerScreenShot}
-                  alt="taskAssignerScreenShot"
-                  borderRadius="lg"
-                />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">Task Assigner</Heading>
-                  <Text>
-                    Create and manage tasks across your team using this web
-                    application.
-                  </Text>
-                </Stack>
-              </CardBody>
-              <CardFooter>
-                <ButtonGroup spacing="2">
-                  <Button
-                    variant="solid"
-                    colorScheme="purple"
-                    onClick={() =>
-                      navigateToAProject(
-                        "https://task-manager-frontend-tawny.vercel.app/"
-                      )
-                    }
-                  >
-                    View
-                  </Button>
-                </ButtonGroup>
-              </CardFooter>
-            </Card>
-            <Card maxW="sm">
-              <CardBody>
-                <Image
-                  src={cmeppuneScreeShot}
-                  alt="cmeppuneScreeShot"
-                  borderRadius="lg"
-                />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">CMEP Pune</Heading>
-                  <Text>
-                    This is a website that I built for a construction company
-                    that highlights their work, clients and services.
-                  </Text>
-                </Stack>
-              </CardBody>
-              <CardFooter>
-                <ButtonGroup spacing="2">
-                  <Button
-                    variant="solid"
-                    colorScheme="purple"
-                    onClick={() => navigateToAProject("https://cmeppune.com/")}
-                  >
-                    View
-                  </Button>
-                </ButtonGroup>
-              </CardFooter>
-            </Card>
-            <Card maxW="sm">
-              <CardBody>
-                <Image
-                  src={appScreenShot}
-                  alt="appScreenShot"
-                  borderRadius="lg"
-                />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">Matchpointandgames</Heading>
-                  <Text>
-                    This app shows you the latest updates of local tournaments.
-                  </Text>
-                </Stack>
-              </CardBody>
-              <CardFooter>
-                <ButtonGroup spacing="2">
-                  <Button
-                    variant="solid"
-                    colorScheme="purple"
-                    onClick={() => setIsOpen(true)}
-                  >
-                    View
-                  </Button>
-                </ButtonGroup>
-              </CardFooter>
-            </Card>
-            <div
-              className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-              aria-hidden="true"
-            >
-              <div
-                className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          id="articles"
-          className="flex flex-col justify-center items-center mt-40"
-        >
-          <div className="flex justify-center items-center gap-10">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Articles
-            </h1>
-            <a className="font-semibold text-blue-500 text-lg" href="https://www.geeksforgeeks.org/user/pranavbapat2002/contributions/?itm_source=geeksforgeeks&itm_medium=article_author&itm_campaign=auth_user">(Check out more...)</a>
-          </div>
-          <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-20">
-            <Card shadow="none">
-              <CardHeader>
-                <Heading size="md">Concurrency in Node JS</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text className="max-w-sm">
-                  Explain how multiple I/O operations are handled by single
-                  threaded Node JS
-                </Text>
-              </CardBody>
-              <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="purple"
-                  onClick={() =>
-                    navigateToAProject(
-                      "https://www.geeksforgeeks.org/how-single-threaded-handles-concurrency-when-multiple-i-o-operations-happening-in-node-js/?utm_source=auth&utm_medium=saved&utm_campaign=articles"
-                    )
-                  }
-                >
-                  View here
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card shadow="none">
-              <CardHeader>
-                <Heading size="md">React JS and Authentication</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text className="max-w-sm">
-                  Build an Authentication App in React JS using Auth0
-                </Text>
-              </CardBody>
-              <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="purple"
-                  onClick={() =>
-                    navigateToAProject(
-                      "https://www.geeksforgeeks.org/how-to-build-a-react-app-with-user-authentication/?utm_source=auth&utm_medium=saved&utm_campaign=articles"
-                    )
-                  }
-                >
-                  View here
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card shadow="none">
-              <CardHeader>
-                <Heading size="md">Chat App in Node JS</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text className="max-w-sm">
-                  Build a Chat App in Node JS using Socket.io
-                </Text>
-              </CardBody>
-              <CardFooter>
-                <Button
-                  variant="solid"
-                  colorScheme="purple"
-                  onClick={() =>
-                    navigateToAProject(
-                      "https://www.geeksforgeeks.org/how-to-create-a-chat-app-using-socket-io-node-js/?utm_source=auth&utm_medium=saved&utm_campaign=articles"
-                    )
-                  }
-                >
-                  View here
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </div>
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
-        <div
-          id="contact"
-          className="flex flex-col justify-center items-center gap-20 mt-40"
-        >
-          <div className="flex flex-col justify-center items-center gap-2">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Contact
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xl hidden lg:invisible">
-              I have worked as a Full Stack Developer and I am proficient in the
-              latest web development technologies that are used in the market
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-10">
-            <Button
-              variant="solid"
-              colorScheme="purple"
-              onClick={() =>
-                navigateToAProject(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSdGveZ7q7lljmS-3SB4kVOSW_GDq_GFcuEhN8gAEgsPfFCWkQ/viewform?usp=sf_link"
-                )
-              }
-            >
-              Fill out this form
-            </Button>
-            <p className="font-semibold">OR</p>
-            <a
-              className="font-semibold"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=pranav.bapat.2002@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Drop an email at pranav.bapat.2002@gmail.com
-            </a>
-          </div>
-        </div>
         {/* Modals */}
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="xl">
           <AppScreens />
         </Modal>
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 mt-20 mb-10 mx-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 mt-10 mb-10 mx-10">
           <div className="flex flex-col justify-center items-center gap-7">
-            <img className="h-14 w-auto rounded-3xl" src={profilePic} alt="" />
             <div className="flex justfiy-center items-center gap-5">
               <img
                 src={instagramLogo}
