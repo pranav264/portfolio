@@ -43,18 +43,18 @@ import gitHubLogo2 from "../assets/icons8-github-25.png";
 
 const steps = [
   {
-    title: "Worked as a content writer at GeeksforGeeks (2022-2023)",
+    title: "Content writer at GeeksforGeeks (2022-2023)",
     description:
       "I worked as an intern at GeeksforGeeks for some time in 2022 and 2023 writing articles related to web development, both frontend and backend development. My major focus was on writing articles that explained web technologies through demonstration. This organization has an abundant set of articles related to technology, interview experiences and more, and it was a good experience to work with them.",
   },
   {
-    title: "Worked as a Full Stack Developer at Koushiki Innovision (2023)",
+    title: "Full Stack Developer at Koushiki Innovision (2023)",
     description:
       "I interned at this company for 6 months and worked as a Full Stack Web Developer building complex web applications. I worked on a zoo management system which would keep track of all the activites that are performed in the zoo and keep track of inventories for food, medicine and more. I also worked on a Tournament Manager System.",
   },
   {
     title:
-      "Worked as a Full Stack Developer with MJ Fabricology (2023 - present)",
+      "Full Stack Developer with MJ Fabricology (2023 - present)",
     description:
       "I further continued the work on the Tournament Manager System. We designed and developed a website that allows you to organize tournaments and manage the scoring digitally. Further, we also developed an application for the public audience to view the scores and matches of different tournaments.",
   },
@@ -164,7 +164,7 @@ export default function Home() {
             aria-hidden="true"
           >
           </div>
-          <div id="home" className="max-w-2xl mx-32 pt-28 pb-24">
+          <div id="home" className="max-w-4xl mx-5 lg:mx-20 pt-28 pb-24">
           <Avatar src={profilePic} className="mb-5">
             <AvatarBadge boxSize='1em' bg='blue.500' />
           </Avatar>
@@ -182,7 +182,33 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="flex justify-center items-center mb-48"
+          className="w-full flex justify-center items-center mb-48 mx-5 xl:hidden"
+        >
+            <Stepper
+              colorScheme="blue"
+              orientation="vertical"
+              gap="20"
+              index={3}
+            >
+              {steps.map((step, index) => (
+                <Step key={index}>
+                  <StepIndicator>
+                    <StepStatus
+                      complete={<StepIcon />}
+                      incomplete={<StepNumber />}
+                      active={<StepNumber />}
+                    />
+                  </StepIndicator>
+                  <Box flexShrink="0">
+                    <StepTitle className="max-w-xs">{step.title}</StepTitle>
+                  </Box>
+                  <StepSeparator />
+                </Step>
+              ))}
+            </Stepper>
+        </div>
+        <div
+          className="hidden xl:flex justify-center items-center mb-48"
         >
             <Stepper
               colorScheme="blue"
@@ -205,7 +231,7 @@ export default function Home() {
               ))}
             </Stepper>
         </div>
-            <div id="projects" className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-7xl mx-auto mt-36">
+            <div id="projects" className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto mt-36 px-20">
               <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://cmeppune.com/">
                 <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300" src={cmeppuneScreeShot} alt="cmeppuneScreeShot" />
                 <div>
