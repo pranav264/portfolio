@@ -40,6 +40,7 @@ import AppScreens from "../Components/AppScreens";
 import instagramLogo from "../assets/icons8-instagram-25.png";
 import linkedInLogo from "../assets/icons8-linkedin-25.png";
 import gitHubLogo2 from "../assets/icons8-github-25.png";
+import 'primeicons/primeicons.css';
 
 const steps = [
   {
@@ -182,7 +183,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="w-full flex justify-center items-center mb-48 mx-5 xl:hidden"
+          className="w-full flex justify-center items-center mb-24 xl:hidden"
         >
             <Stepper
               colorScheme="blue"
@@ -208,7 +209,7 @@ export default function Home() {
             </Stepper>
         </div>
         <div
-          className="hidden xl:flex justify-center items-center mb-48"
+          className="hidden xl:flex justify-center items-center mb-24"
         >
             <Stepper
               colorScheme="blue"
@@ -231,7 +232,7 @@ export default function Home() {
               ))}
             </Stepper>
         </div>
-            <div id="projects" className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto mt-36 px-20">
+            <div id="projects" className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto px-5">
               <a className="flex flex-col items-start gap-2 hover:cursor-pointer" href="https://cmeppune.com/">
                 <img className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300" src={cmeppuneScreeShot} alt="cmeppuneScreeShot" />
                 <div>
@@ -274,42 +275,33 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 mt-10 mb-10 mx-10">
           <div className="flex flex-col justify-center items-center gap-7">
             <div className="flex justfiy-center items-center gap-5">
-              <img
-                src={instagramLogo}
-                alt="instagramLogo"
-                className="hover:cursor-pointer"
+              <i
+                className="pi pi-instagram hover:cursor-pointer"
                 onClick={() =>
                   navigateToAProject(
                     "https://www.instagram.com/pranav_dev_gayak/"
                   )
                 }
-              />
-              <img
-                src={linkedInLogo}
-                alt="linkedInLogo"
-                className="hover:cursor-pointer"
+              ></i>
+              <i
+                className="pi pi-linkedin hover:cursor-pointer"
                 onClick={() =>
                   navigateToAProject(
                     "https://www.linkedin.com/in/pranav-bapat-a208531b6/"
                   )
                 }
-              />
-              <img
-                src={gitHubLogo2}
-                alt="gitHubLogo2"
-                className="hover:cursor-pointer"
+              ></i>
+              <i
+                className="pi pi-github hover:cursor-pointer"
                 onClick={() =>
                   navigateToAProject("https://github.com/pranav264")
                 }
-              />
+              ></i>
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-center items-center gap-5 mt-32 ml-5">
+        <div className="flex justify-center items-center mt-20 mb-2">
           <p className="font-semibold">&copy; 2024 Pranav Bapat</p>
-          <p>
-            Icons by <a href="https://www.icons8.com">Icons8</a>
-          </p>
         </div>
       </div>
     </>
